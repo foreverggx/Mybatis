@@ -15,4 +15,7 @@
             </dataSource>
         </environment>
     </environments>
+    <mappers>
+        <mapper resource="tech/aistar/day01/dao/StudentDaoMapper.xml"></mapper>
+    </mappers>
 </configuration>
