@@ -19,4 +19,32 @@
         -->
         select * from student_test where sname like ${value}
     </select>
+    <insert id="save" parameterType="tech.aistar.day01.entity.Student">
+        <!--
+        传入的参数是对象类型,name#{}中的参数一定是在Student中通过反射找到的
+        底层的原理是通过OGNL - 对象导航语言
+        -->
+        INSERT INTO student_test(sno,sname,birthday,gender) values(#{sno},#{sname},#{birthday},#{gender})
+    </insert>
+
+    <!--插入之后允许返回主键值-->
+    <insert id="saveKey" parameterType="tech.aistar.day01.entity.Student">
+        <!--
+        order="AFTER" - 代表执行insert语句之后返回
+        keyColumn - 哪个列的自增值
+        keyProperty - 将查询的自增值封装到对象哪个属性上
+        -->
+        <selectKey order="AFTER" keyColumn="id" keyProperty="id" resultType="int">
+            SELECT  last_insert_id()
+        </selectKey>
+         insert into student_test(sno,sname) values(#{sno},#{sname})
+    </insert>
+
+    <delete id="delById" parameterType="int">
+        delete from student_test where id = #{id}
+    </delete>
+
+    <update id="update" parameterType="tech.aistar.day01.entity.Student">
+        update student_test set sno = #{sno},sname = #{sname}, birthday = #{birthday},gender = #{gender} where id = #{id}
+    </update>
 </mapper>

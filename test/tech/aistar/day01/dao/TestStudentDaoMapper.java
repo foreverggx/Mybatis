@@ -6,10 +6,14 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Test;
+import tech.aistar.day01.dao.impl.StudentDaoImpl;
+import tech.aistar.day01.entity.Gender;
 import tech.aistar.day01.entity.Student;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -46,5 +50,29 @@ public class TestStudentDaoMapper {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    StudentDaoMapper studentDaoMapper = new StudentDaoImpl();
+    @Test
+    public void testSave() {
+        Student stu = new Student();
+        stu.setSno("1002");
+        stu.setSname("jary");
+        stu.setBirthday(new Date());
+        stu.setGender(Gender.F);
+        studentDaoMapper.save(stu);
+    }
+
+    @Test
+    public void testDelById() {
+        studentDaoMapper.delById(11);
+    }
+
+    @Test
+    public void testUpdate() {
+        Student stu = studentDaoMapper.findById(1);
+        stu.setSno("1005");
+        stu.setSname("tom");
+        studentDaoMapper.update(stu);
     }
 }
