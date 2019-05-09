@@ -20,5 +20,7 @@
     </environments>
     <mappers>
         <mapper resource="tech/aistar/day01/dao/StudentDaoMapper.xml"></mapper>
+
+        <package name="tech.aistar"></package>
     </mappers>
 </configuration>

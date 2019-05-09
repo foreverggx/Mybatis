@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+    每个映射文件中的namespace值就是mapper接口的全限定名
+    jdk的动态代理基于接口,只能代理接口
+-->
+<mapper namespace="tech.aistar.day02.StudentMapper">
+    <!--映射文件中的每个标签的id值必须以mapper接口中定义的方法的名称保持一致-->
+    <select id="findById" parameterType="int" resultType="tech.aistar.day01.entity.Student">
+        select id,sno,sname,birthday,gender from student_test where id = #{id}
+    </select>
+</mapper>
