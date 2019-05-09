@@ -1,5 +1,6 @@
 package tech.aistar.day01.dao;
 
+import jdk.internal.util.xml.impl.Input;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -9,6 +10,7 @@ import tech.aistar.day01.entity.Student;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 /**
  * @Description: java类作用描述:
@@ -27,6 +29,20 @@ public class TestStudentDaoMapper {
             //查询单个对象
             Student stu = sqlSession.selectOne("StudentDaoMapper.findById",1);
             System.out.println(stu);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void testFindBySname() {
+        try {
+            InputStream in = Resources.getResourceAsStream("mybatis-config.xml");
+            SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(in);
+            SqlSession sqlSession = sqlSessionFactory.openSession();
+
+            List<Student> list = sqlSession.selectList("StudentDaoMapper.findBySname","'%h%'");
+            list.forEach(System.out::println);
         } catch (IOException e) {
             e.printStackTrace();
         }

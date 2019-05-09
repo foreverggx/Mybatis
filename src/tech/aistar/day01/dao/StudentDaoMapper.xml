@@ -3,7 +3,20 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="StudentDaoMapper">
+    <!--id的值推荐和接口中的名称一样
+            ParameterType - 代表指定参数的类型,可以使用别名
+            resultType - 代表返回值类型-->
     <select id="findById" parameterType="Integer" resultType="tech.aistar.day01.entity.Student">
+            <!--参数的占位符#{}/&{}
+            传入的参数是一个简单类型,#{}中的参数可以是任意名推荐写列名/参数名/value
+        -->
         select * from student_test where id = #{id}
+    </select>
+    <select id="findBySname" parameterType="String" resultType="tech.aistar.day01.entity.Student">
+        <!--
+            传入的参数是一个简单类型,${}中的参数只能是value.
+            使用${}硬拼接容易造成sql的注入
+        -->
+        select * from student_test where sname like ${value}
     </select>
 </mapper>
