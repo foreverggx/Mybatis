@@ -30,4 +30,30 @@ public interface StudentSqlMapper {
      * @return
      */
     List<Student> findByAnyConditional(@Param("id") Integer id, @Param("sname") String sname);
+
+    /**
+     * 更新一个学生信息
+     *
+     * @param stu
+     */
+    void update(Student stu);
+
+    /**
+     * 根据多个id查询多个学生信息
+     *
+     * @param ids
+     * @return
+     */
+    List<Student> findByIds(@Param("ids") List<Integer> ids);
+
+    /**
+     * 有id根据id查询,没有id根据sname查询
+     *
+     * @param id
+     * @param sname
+     * @return
+     */
+    List<Student> findInConditional(@Param("id") Integer id, @Param("sname") String sname);
+
+    void saveList(@Param("stuList") List<Student> stuList);
 }

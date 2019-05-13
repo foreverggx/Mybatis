@@ -28,9 +28,12 @@
         </environment>
     </environments>
     <mappers>
+
         <mapper resource="tech/aistar/day01/dao/StudentDaoMapper.xml"></mapper>
+
         <mapper resource="tech/aistar/day02/sql_all.xml"></mapper>
 
         <package name="tech.aistar"></package>
+
     </mappers>
 </configuration>
