@@ -44,6 +44,7 @@ public class TestStudentMapper {
         queryVo.setSname("%h%");
 
         mapper.findByIdAndSname(queryVo).forEach(System.out::println);
+        sqlSession.close();
     }
 
     @Test
@@ -53,6 +54,7 @@ public class TestStudentMapper {
         StudentMapper mapper = sqlSession.getMapper(StudentMapper.class);
 
         mapper.findByIdAndSnameAno(1,"%h%").forEach(System.out::println);
+        sqlSession.close();
     }
 
     @Test
@@ -65,5 +67,6 @@ public class TestStudentMapper {
         map.put("id",1);
         map.put("sname","%h%");
         mapper.findByIdAndSnameMap(map).forEach(System.out::println);
+        sqlSession.close();
     }
 }
