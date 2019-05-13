@@ -3,6 +3,12 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="tech.aistar.day02.StudentSqlMapper">
+
+    <!--创建sql片段-->
+    <sql id="queryAll_sql">
+        select * from student_test
+    </sql>
+
     <select id="findByIdOrSnameAno" resultType="student">
         select * from student_test where id>#{id}
         <!--使用id判断参数是否存在-->
@@ -20,14 +26,18 @@
             and sname like concat('%',#{sname},'%')
         </if>-->
 
-        select * from student_test
-        <where>
+        <!--select * from student_test-->
+        <!--引用sql片段-->
+        <include refid="queryAll_sql"></include>
+
+        <!--<where>
             <if test="id != null">
                 and id > 1
             </if>
             <if test="sname != null">
                 and sname like concat('%',#{sname},'%')
             </if>
-        </where>
+        </where>-->
+        <include refid="sql_all.xml.query_where"></include>
     </select>
 </mapper>

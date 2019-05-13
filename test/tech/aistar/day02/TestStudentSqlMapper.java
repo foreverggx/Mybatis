@@ -26,7 +26,7 @@ public class TestStudentSqlMapper {
         SqlSession sqlSession = MybatisUtil.getSession();
         StudentSqlMapper sqlMapper = sqlSession.getMapper(StudentSqlMapper.class);
 
-        sqlMapper.findByIdOrSnameAno(1,"h").forEach(System.out::println);
+        sqlMapper.findByAnyConditional(1,"h").forEach(System.out::println);
         sqlSession.close();
     }
 }
