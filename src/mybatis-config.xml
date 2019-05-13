@@ -3,18 +3,27 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+    <properties resource="dbConfig.properties"></properties>
     <settings>
         <setting name="logImpl" value="LOG4J"/>
     </settings>
+
+    <!--配置文件取别名-->
+    <typeAliases>
+        <!--针对每个文件取别名
+        <typeAlias type="tech.aistar.day01.entity" alias="student"></typeAlias>
+         -->
+        <!--推荐使用,扫描需要取别名的包-->
+        <package name="tech.aistar.day01.entity"></package>
+    </typeAliases>
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
-                <property name="driver" value="com.mysql.jdbc.Driver"/>
-                <property name="url"
-                          value="jdbc:mysql://localhost:3306/aistar?useSSL=false&amp;useUnicode=false&amp;characterEncoding=utf8"/>
-                <property name="username" value="root"/>
-                <property name="password" value="root"/>
+                <property name="driver" value="${mysql.driver}"/>
+                <property name="url" value="${mysql.url}"/>
+                <property name="username" value="${mysql.username}"/>
+                <property name="password" value="${mysql.password}"/>
             </dataSource>
         </environment>
     </environments>
