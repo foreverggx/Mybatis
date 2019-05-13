@@ -11,4 +11,17 @@
     <select id="findById" parameterType="int" resultType="tech.aistar.day01.entity.Student">
         select id,sno,sname,birthday,gender from student_test where id = #{id}
     </select>
+
+    <!--输入映射是一个对象类型 - 充分使用OGNL 对象导航语言-->
+    <select id="findByIdAndSname" parameterType="studentQueryVo" resultType="student">
+        select id,sno,sname,birthday,gender from student_test where id > #{id} and sname like #{sname}
+    </select>
+
+    <select id="findByIdAndSnameAno" resultType="student">
+      select id,sno,sname,birthday,gender from student_test where id > #{id} and sname like #{sname}
+    </select>
+
+    <select id="findByIdAndSnameMap" parameterType="map" resultType="student">
+        select id,sno,sname,birthday,gender from student_test where id > #{id} and sname like #{sname}
+    </select>
 </mapper>

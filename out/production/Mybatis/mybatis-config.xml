@@ -7,6 +7,15 @@
     <settings>
         <setting name="logImpl" value="LOG4J"/>
     </settings>
+
+    <!--配置文件取别名-->
+    <typeAliases>
+        <!--针对每个文件取别名
+        <typeAlias type="tech.aistar.day01.entity" alias="student"></typeAlias>
+         -->
+        <!--推荐使用,扫描需要取别名的包-->
+        <package name="tech.aistar.day01.entity"></package>
+    </typeAliases>
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>

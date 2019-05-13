@@ -3,7 +3,11 @@ package tech.aistar.day02;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 import tech.aistar.day01.entity.Student;
+import tech.aistar.day01.entity.vo.StudentQueryVo;
 import util.MybatisUtil;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @Description: java类作用描述:
@@ -27,5 +31,39 @@ public class TestStudentMapper {
         Student stu = mapper.findById(1);
 
         System.out.println(stu);
+    }
+
+    @Test
+    public void testFindByIdAndSname() {
+        SqlSession sqlSession = MybatisUtil.getSession();
+
+        StudentMapper mapper = sqlSession.getMapper(StudentMapper.class);
+
+        StudentQueryVo queryVo = new StudentQueryVo();
+        queryVo.setId(1);
+        queryVo.setSname("%h%");
+
+        mapper.findByIdAndSname(queryVo).forEach(System.out::println);
+    }
+
+    @Test
+    public void testFindByIdAndSnameAno() {
+        SqlSession sqlSession = MybatisUtil.getSession();
+
+        StudentMapper mapper = sqlSession.getMapper(StudentMapper.class);
+
+        mapper.findByIdAndSnameAno(1,"%h%").forEach(System.out::println);
+    }
+
+    @Test
+    public void testFindByIdAndSnameMap() {
+        SqlSession sqlSession = MybatisUtil.getSession();
+
+        StudentMapper mapper = sqlSession.getMapper(StudentMapper.class);
+
+        Map<String,Object> map = new HashMap<>();
+        map.put("id",1);
+        map.put("sname","%h%");
+        mapper.findByIdAndSnameMap(map).forEach(System.out::println);
     }
 }
