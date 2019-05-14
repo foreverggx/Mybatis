@@ -3,48 +3,65 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="StudentDaoMapper">
-    <!--id的值推荐和接口中的名称一样
-            ParameterType - 代表指定参数的类型,可以使用别名
-            resultType - 代表返回值类型-->
-    <select id="findById" parameterType="Integer" resultType="tech.aistar.day01.entity.Student">
-            <!--参数的占位符#{}/&{}
-            传入的参数是一个简单类型,#{}中的参数可以是任意名推荐写列名/参数名/value
-        -->
-        select * from student_test where id = #{id}
+    <!--id的值应该是唯一的,推荐和接口中的名称是保持一致的
+        parameterType - 代表的指定参数的类型,可以使用别名
+        reultType - 代表的是返回的结果的类型
+
+        mybatis可以进行sql参数的设置,
+        可以自动将结果集封装到对象中.
+
+        注意 - 使用resultType进行自动映射需要满足的条件应该是
+               列名和属性名保持一致或者和setter/getter
+
+        参数的占位符的方式可以通过#{参数}以及${参数}
+
+        如果传入的参数是一个简单类型的话,那么#{参数}中的参数可以是任意名称或者是value
+      -->
+    <select id="find" parameterType="_int" resultType="tech.aistar.day01.entity.Student">
+        select id,name sname,sno from db_student where id = #{value}
     </select>
-    <select id="findBySname" parameterType="String" resultType="tech.aistar.day01.entity.Student">
+
+    <select id="findByLike" parameterType="String" resultType="tech.aistar.day01.entity.Student">
         <!--
-            传入的参数是一个简单类型,${}中的参数只能是value.
-            使用${}硬拼接容易造成sql的注入
+           string属于简单类型
+         #{} - >PreparedStatement方式的发送参数
+         ${} -> 是Statement方式的拼接sql,容易造成sql的注入 - 将传入进来的参数原封不动的拼接到sql语句中去
+         /* select id,name sname,sno from db_student where name like #{value}*/
+         -->
+
+        <!--
+            ${}如果是一个简单类型的话,那么只能是value
         -->
-        select * from student_test where sname like ${value}
+        select id,name,sno,birthday from db_student where name like ${value}
     </select>
+
     <insert id="save" parameterType="tech.aistar.day01.entity.Student">
         <!--
-        传入的参数是对象类型,name#{}中的参数一定是在Student中通过反射找到的
-        底层的原理是通过OGNL - 对象导航语言
+        传入的参数是一个对象类型,那么#{}中的参数一定是在Student中必定可以通过反射找到
+        底层的原理是通过OGNL - 对象导航语言.
         -->
-        INSERT INTO student_test(sno,sname,birthday,gender) values(#{sno},#{sname},#{birthday},#{gender})
+        insert into db_student(sno,name,birthday) values(#{sno},#{sname},#{birthday})
     </insert>
 
     <!--插入之后允许返回主键值-->
-    <insert id="saveKey" parameterType="tech.aistar.day01.entity.Student">
-        <!--
-        order="AFTER" - 代表执行insert语句之后返回
+    <insert id="saverkeys" parameterType="tech.aistar.day01.entity.Student">
+
+        <!---
+        order="AFTER" - 代表是执行insert语句之后返回
         keyColumn - 哪个列的自增值
-        keyProperty - 将查询的自增值封装到对象哪个属性上
-        -->
+        keyProperty - 将查询的自增的值封装到对象的哪个属性上-->
         <selectKey order="AFTER" keyColumn="id" keyProperty="id" resultType="int">
-            SELECT  last_insert_id()
+            select last_insert_id()
         </selectKey>
-         insert into student_test(sno,sname) values(#{sno},#{sname})
+
+        insert into db_student(sno,name,birthday) values(#{sno},#{sname},#{birthday})
     </insert>
 
     <delete id="delById" parameterType="int">
-        delete from student_test where id = #{id}
+        delete from db_student where id = #{value}
     </delete>
 
     <update id="update" parameterType="tech.aistar.day01.entity.Student">
-        update student_test set sno = #{sno},sname = #{sname}, birthday = #{birthday},gender = #{gender} where id = #{id}
+        update db_student set sno=#{sno},name=#{sname},birthday=#{birthday} where id=#{id}
     </update>
 </mapper>

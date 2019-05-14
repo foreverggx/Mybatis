@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="common_mapper">
+    <resultMap id="queryUserMap" type="userCustomVo">
+        <id column="id" property="id"></id>
+        <result column="username" property="username"></result>
+        <result column="birthday" property="birthday"></result>
+        <result column="sex" property="sex"></result>
+        <result column="address" property="address"></result>
+    </resultMap>
+
+    <resultMap id="queryOrderMap" type="orderCustomVo">
+        <id column="oid" property="id"></id>
+        <result column="user_id" property="userId"></result>
+        <result column="number" property="number"></result>
+        <result column="createtime" property="createtime"></result>
+        <result column="note" property="note"></result>
+        <collection property="orderdetails" ofType="OrdersDetailCustomVo" resultMap="queryOrderDetailMap"></collection>
+    </resultMap>
+
+    <resultMap id="queryOrderDetailMap" type="OrdersDetailCustomVo">
+        <id column="did" property="id"></id>
+        <result column="orders_id" property="ordersId"></result>
+        <result column="items_id" property="itemsId"></result>
+        <result column="items_num" property="itemsNum"></result>
+        <association property="itemsCustomVo" javaType="ItemsCustomVo" resultMap="queryItemMap"></association>
+    </resultMap>
+
+    <resultMap id="queryItemMap" type="ItemsCustomVo">
+        <id column="itemid" property="id"></id>
+        <result column="name" property="name"></result>
+        <result column="price" property="price"></result>
+        <result column="detail" property="detail"></result>
+        <result column="pic" property="pic"></result>
+        <result column="iceatetime" property="createtime"></result>
+    </resultMap>
+</mapper>

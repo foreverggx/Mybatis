@@ -2,7 +2,6 @@ package tech.aistar.day04.mapper;
 
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
-import tech.aistar.day02.homework.entity.Order;
 import tech.aistar.day04.vo.OrdersCustomVo;
 import tech.aistar.day04.vo.OrdersQueryVo;
 import util.MybatisUtil;

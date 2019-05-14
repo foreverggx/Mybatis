@@ -22,12 +22,12 @@
     </typeAliases>
     <environments default="development">
         <environment id="development">
-            <transactionManager type="JDBC"/>
+            <transactionManager type="JDBC"></transactionManager>
             <dataSource type="POOLED">
-                <property name="driver" value="${mysql.driver}"/>
-                <property name="url" value="${mysql.url}"/>
-                <property name="username" value="${mysql.username}"/>
-                <property name="password" value="${mysql.password}"/>
+                <property name="driver" value="${mysql.driver}"></property>
+                <property name="url" value="${mysql.url}"></property>
+                <property name="username" value="${mysql.username}"></property>
+                <property name="password" value="${mysql.password}"></property>
             </dataSource>
         </environment>
     </environments>
@@ -36,6 +36,7 @@
         <mapper resource="tech/aistar/day01/dao/StudentDaoMapper.xml"></mapper>
 
         <mapper resource="tech/aistar/day02/sql_all.xml"></mapper>
+        <mapper resource="tech/aistar/day04/mapper/common_all.xml"></mapper>
 
         <package name="tech.aistar"></package>
 
