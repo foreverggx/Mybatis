@@ -18,4 +18,12 @@ public interface UserMapper {
      * @return
      */
     UserCustomVo findById(Integer id);
+
+    /**
+     * 根据id查询用户及其订单信息,单独查询User只会发送查询user的sql语句
+     *
+     * @param id
+     * @return
+     */
+    UserCustomVo getUserAndOrdersByIdLazy(Integer id);
 }

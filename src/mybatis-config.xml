@@ -9,6 +9,10 @@
         <setting name="logImpl" value="LOG4J"/>
         <!--开启驼峰命名规则-->
         <setting name="mapUnderscoreToCamelCase" value="true"></setting>
+        <!--开启延迟加载-->
+        <setting name="lazyLoadingEnabled" value="true"></setting>
+        <setting name="aggressiveLazyLoading" value="false"></setting>
+        <setting name="lazyLoadTriggerMethods" value="clone"></setting>
     </settings>
     <!--配置文件取别名-->
     <typeAliases>

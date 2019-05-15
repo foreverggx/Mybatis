@@ -21,4 +21,7 @@
     <select id="findById" parameterType="int" resultMap="findByIdMap">
         select o.*,u.id uid,u.username,u.birthday,u.sex,u.address from orders o join user u on o.user_id = u.id where o.id = #{id}
     </select>
+    <select id="findByUserId" resultType="orderCustomVo" parameterType="int">
+        select * from orders where user_id = #{value}
+    </select>
 </mapper>

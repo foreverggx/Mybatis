@@ -49,4 +49,11 @@
         join orderdetail d on o.id = d.orders_id
         join items item on d.items_id= item.id where u.id = #{id}
     </select>
+    <select id="getUserAndOrdersByIdLazy" resultMap="getUserAndOrdersByIdLazyMap" parameterType="int">
+        select * from user where id = #{id}
+    </select>
+    <resultMap id="getUserAndOrdersByIdLazyMap" type="userCustomVo">
+        <id column="id" property="id"></id>
+        <collection select="tech.aistar.day04.mapper.OrdersMapper.findByUserId" column="id" property="orderCustomVos" ofType="orderCustomVo"></collection>
+    </resultMap>
 </mapper>
