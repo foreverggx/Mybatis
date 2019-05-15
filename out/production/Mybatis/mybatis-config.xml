@@ -5,12 +5,11 @@
 <configuration>
     <properties resource="dbConfig.properties"></properties>
     <settings>
+        <!--强制使用log4j日志框架-->
         <setting name="logImpl" value="LOG4J"/>
-
         <!--开启驼峰命名规则-->
         <setting name="mapUnderscoreToCamelCase" value="true"></setting>
     </settings>
-
     <!--配置文件取别名-->
     <typeAliases>
         <!--针对每个文件取别名
@@ -20,6 +19,12 @@
         <package name="tech.aistar.day01.entity"></package>
         <package name="tech.aistar.day04"></package>
     </typeAliases>
+    <!--分页插件-->
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <property name="dialect" value="com.github.pagehelper.PageHelper"></property>
+        </plugin>
+    </plugins>
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"></transactionManager>

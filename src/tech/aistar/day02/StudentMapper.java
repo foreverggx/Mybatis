@@ -48,4 +48,11 @@ public interface StudentMapper {
      * @return
      */
     List<Student> findByIdAndSnameMap(Map<String, Object> map);
+
+    /**
+     * 查询所有学生信息
+     *
+     * @return
+     */
+    List<Student> findAll();
 }

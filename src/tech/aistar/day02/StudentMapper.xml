@@ -18,10 +18,14 @@
     </select>
 
     <select id="findByIdAndSnameAno" resultType="student">
-      select id,sno,sname,birthday,gender from student_test where id > #{id} and sname like #{sname}
+        select id,sno,sname,birthday,gender from student_test where id > #{id} and sname like #{sname}
     </select>
 
     <select id="findByIdAndSnameMap" parameterType="map" resultType="student">
         select id,sno,sname,birthday,gender from student_test where id > #{id} and sname like #{sname}
+    </select>
+
+    <select id="findAll" resultType="student">
+        select * from student_test
     </select>
 </mapper>
