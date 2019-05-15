@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d500003b-5aae-4284-94ef-99415d4100a4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/tech/aistar/day05/TestLazyDemo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/tech/aistar/day05/TestTwoCacheDemo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Mybatis/mybatis-config.xml" afterPath="$PROJECT_DIR$/out/production/Mybatis/mybatis-config.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mybatis-config.xml" afterPath="$PROJECT_DIR$/src/mybatis-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tech/aistar/day04/mapper/OrdersMapper.xml" afterPath="$PROJECT_DIR$/src/tech/aistar/day04/mapper/OrdersMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tech/aistar/day04/mapper/UserMapper.java" afterPath="$PROJECT_DIR$/src/tech/aistar/day04/mapper/UserMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tech/aistar/day04/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/src/tech/aistar/day04/mapper/UserMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -86,10 +83,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestLazyDemo.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestLazyDemo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/tech/aistar/day05/TestLazyDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
+            <state relative-caret-position="408">
               <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -101,12 +98,24 @@
       <file leaf-file-name="OrdersMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tech/aistar/day04/mapper/OrdersMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
+            <state relative-caret-position="377">
               <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
               <folding>
                 <marker date="1557910365567" expanded="true" signature="304:426" ph="select o.*,u... orders" />
                 <marker date="1557910365567" expanded="true" signature="1060:1182" ph="select o.*,u... orders" />
                 <marker date="1557910365567" expanded="true" signature="1283:1328" ph="select * fro... orders" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestTwoCacheDemo.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/tech/aistar/day05/TestTwoCacheDemo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -136,7 +145,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/util/MybatisUtil.java" />
         <option value="$PROJECT_DIR$/src/tech/aistar/day01/dao/StudentDaoMapper.java" />
         <option value="$PROJECT_DIR$/src/tech/aistar/day01/entity/Student.java" />
         <option value="$PROJECT_DIR$/src/tech/aistar/day01/dao/impl/StudentDaoImpl.java" />
@@ -182,11 +190,12 @@
         <option value="$PROJECT_DIR$/src/tech/aistar/day02/homework/StudentMapper.xml" />
         <option value="$PROJECT_DIR$/src/tech/aistar/day02/StudentMapper.xml" />
         <option value="$PROJECT_DIR$/test/tech/aistar/day05/PageHelperTestDemo.java" />
-        <option value="$PROJECT_DIR$/src/mybatis-config.xml" />
         <option value="$PROJECT_DIR$/src/tech/aistar/day04/mapper/UserMapper.java" />
         <option value="$PROJECT_DIR$/src/tech/aistar/day04/mapper/UserMapper.xml" />
         <option value="$PROJECT_DIR$/src/tech/aistar/day04/mapper/OrdersMapper.xml" />
         <option value="$PROJECT_DIR$/test/tech/aistar/day05/TestLazyDemo.java" />
+        <option value="$PROJECT_DIR$/src/mybatis-config.xml" />
+        <option value="$PROJECT_DIR$/test/tech/aistar/day05/TestTwoCacheDemo.java" />
       </list>
     </option>
   </component>
@@ -197,8 +206,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-22" />
-    <option name="y" value="12" />
+    <option name="x" value="-147" />
+    <option name="y" value="9" />
     <option name="width" value="1237" />
     <option name="height" value="1017" />
   </component>
@@ -486,7 +495,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestLazyDemo.testGetUserAndOrdersById">
+  <component name="RunManager" selected="JUnit.TestTwoCacheDemo.testTwoCache">
     <configuration default="false" name="TestOrdersMapper.testGetById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -539,32 +548,6 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="TestStudentMapper.testFindByIdAndSnameMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="tech.aistar.day02.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Mybatis" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="tech.aistar.day02" />
-      <option name="MAIN_CLASS_NAME" value="tech.aistar.day02.TestStudentMapper" />
-      <option name="METHOD_NAME" value="testFindByIdAndSnameMap" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="TestStudentSqlMapper.testFindInConditional" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -604,6 +587,32 @@
       <option name="PACKAGE_NAME" value="tech.aistar.day05" />
       <option name="MAIN_CLASS_NAME" value="tech.aistar.day05.TestLazyDemo" />
       <option name="METHOD_NAME" value="testGetUserAndOrdersById" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestTwoCacheDemo.testTwoCache" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="tech.aistar.day05.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Mybatis" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="tech.aistar.day05" />
+      <option name="MAIN_CLASS_NAME" value="tech.aistar.day05.TestTwoCacheDemo" />
+      <option name="METHOD_NAME" value="testTwoCache" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1007,17 +1016,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.TestOrdersMapper.testGetById" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.PageHelperTestDemo.testPageHelper" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.TestStudentMapper.testFindByIdAndSnameMap" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.TestStudentSqlMapper.testFindInConditional" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.TestLazyDemo.testGetUserAndOrdersById" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TestStudentSqlMapper.testFindInConditional" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TestLazyDemo.testGetUserAndOrdersById" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.TestTwoCacheDemo.testTwoCache" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TestLazyDemo.testGetUserAndOrdersById" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.PageHelperTestDemo.testPageHelper" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.TestOrdersMapper.testGetById" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.TestStudentSqlMapper.testFindInConditional" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.TestStudentMapper.testFindByIdAndSnameMap" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TestTwoCacheDemo.testTwoCache" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TestLazyDemo.testGetUserAndOrdersById" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.PageHelperTestDemo.testPageHelper" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.TestOrdersMapper.testGetById" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.TestStudentSqlMapper.testFindInConditional" />
       </list>
     </recent_temporary>
   </component>
@@ -1043,17 +1052,11 @@
       <workItem from="1557795766619" duration="7754000" />
       <workItem from="1557817975110" duration="13839000" />
       <workItem from="1557880445317" duration="6524000" />
-      <workItem from="1557901366328" duration="3219000" />
+      <workItem from="1557901366328" duration="4514000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PageHelperTestDemo_testPageHelper - 2019.05.15 at 10h 40m 52s.xml">
-      <configuration name="PageHelperTestDemo.testPageHelper" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PageHelperTestDemo_testPageHelper - 2019.05.15 at 10h 41m 17s.xml">
-      <configuration name="PageHelperTestDemo.testPageHelper" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="PageHelperTestDemo_testPageHelper - 2019.05.15 at 11h 09m 56s.xml">
       <configuration name="PageHelperTestDemo.testPageHelper" configurationId="JUnit" />
     </history-entry>
@@ -1078,12 +1081,19 @@
     <history-entry file="TestStudentSqlMapper_testFindInConditional - 2019.05.15 at 10h 29m 45s.xml">
       <configuration name="TestStudentSqlMapper.testFindInConditional" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestTwoCacheDemo_testTwoCache - 2019.05.15 at 17h 08m 51s.xml">
+      <configuration name="TestTwoCacheDemo.testTwoCache" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestTwoCacheDemo_testTwoCache - 2019.05.15 at 17h 13m 52s.xml">
+      <configuration name="TestTwoCacheDemo.testTwoCache" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86031000" />
+    <option name="totallyTimeSpent" value="87326000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-22" y="12" width="1237" height="1017" extended-state="0" />
+    <frame x="-147" y="9" width="1237" height="1017" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1095,9 +1105,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46361503" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46361503" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31455398" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31455398" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32760105" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1164,13 +1174,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/tech/aistar/day01/entity/vo/StudentQueryVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tech/aistar/day02/StudentMapperAno.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
@@ -1462,14 +1465,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="14" column="61" lean-forward="false" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/tech/aistar/day04/mapper/TestOrdersMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1514,9 +1509,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/tech/aistar/day05/TestLazyDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="15" column="53" lean-forward="false" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/tech/aistar/day04/mapper/OrdersMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
+        <state relative-caret-position="377">
           <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
           <folding>
             <marker date="1557910365567" expanded="true" signature="304:426" ph="select o.*,u... orders" />
@@ -1526,10 +1539,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/tech/aistar/day05/TestLazyDemo.java">
+    <entry file="file://$PROJECT_DIR$/test/tech/aistar/day05/TestTwoCacheDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="192">
+          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

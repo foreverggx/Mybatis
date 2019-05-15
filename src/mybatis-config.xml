@@ -13,6 +13,8 @@
         <setting name="lazyLoadingEnabled" value="true"></setting>
         <setting name="aggressiveLazyLoading" value="false"></setting>
         <setting name="lazyLoadTriggerMethods" value="clone"></setting>
+        <!--mybatis默认的是一级缓存,二级缓存需要手动开启,影响所有映射器中的配置的缓存-->
+        <setting name="cacheEnabled" value="true"></setting>
     </settings>
     <!--配置文件取别名-->
     <typeAliases>
